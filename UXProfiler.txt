@@ -1,0 +1,38 @@
+{
+"_id" : ObjectId("5ed74c37ef3f0420af1b86a7"),
+"userName" : "SuperAdmin",
+"emailId" : "superadmin@cts.com",
+"password" : "$2b$10$k1MaVU.FV2t2EqDGjzJQRunLtzBFY2Uv68qdkEtnVn9Tl4BL6e0xG",
+"role" : "admin",
+"incorrect_attempts" : 0
+}
+
+
+
+C:\Program Files\RabbitMQ Server\rabbitmq_server-3.7.13\sbin>rabbitmqctl add_user zantmeter zantmeter2019
+
+    Adding user "zantmeter" ...
+
+C:\Program Files\RabbitMQ Server\rabbitmq_server-3.7.13\sbin>rabbitmqctl set_user_tags zantmeter administrator         
+
+    Setting tags for user "zantmeter" to [administrator] …
+
+ C:\Program Files\RabbitMQ Server\rabbitmq_server-3.7.13\sbin>rabbitmqctl set_permissions -p / zantmeter ".*" ".*" ".*"
+
+    Setting permissions for user "zantmeter" in vhost "/" …
+
+ 
+
+Open rabbitmq config file from C:\Program Files\RabbitMQ Server\rabbitmq_server-3.7.13\etc\rabbitmq.config and then replace it with the contents below
+
+[
+
+  {rabbit, [
+
+    {tcp_listeners, [{"0.0.0.0", 5672},
+
+                     {"::",      5672}]}
+
+  ]}
+
+].
