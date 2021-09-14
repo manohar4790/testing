@@ -1,0 +1,11 @@
+{
+"type" : "OnPremise",
+"loadAgentName" : "EC2AMAZ-D04857E",
+"hostName" : "EC2AMAZ-D04857E",
+"specification" : "",
+"status" : "Available",
+"localHostName" : "EC2AMAZ-D04857E",
+"currentTestRunID" : null,
+"region" : "",
+"customerId" : ObjectId(""),
+}
